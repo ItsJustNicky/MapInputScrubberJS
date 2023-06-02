@@ -1,0 +1,22 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  aside(id="mapBar")
+    div(id="interface")
+
+      p Entered Coordinates:
+      span(id="text") -
+      p
+      input.input-box(type="text" id="myInput" placeholder="Enter text here")
+    p
+    
+    input.submit-button(type="button" value="Submit" onclick="handleSubmit()")
+    div(id="map")
+    script( src='https://unpkg.com/leaflet@1.9.3/dist/leaflet.js'
+        integrity='sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM='
+        crossorigin='')
+    script(src='/javascripts/index.js')
+  div(id="out")
+  

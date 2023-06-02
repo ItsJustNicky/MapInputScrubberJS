@@ -1,0 +1,19 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='https://unpkg.com/leaflet@1.9.3/dist/leaflet.css'
+      integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+      crossorigin="")
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet' href='/javascripts/leaflet/leaflet.css')
+    script(src = '/javascripts/leaflet/leaflet.js')
+  body
+     script.
+      var jsonData = #{JSON.stringify(jsonData)}  ;
+      script(src="GeoJSON.js");
+  block content
+    
+  footer
+    p maps by: 
+      a(href ="https://leafletjs.com/") Leafletjs
